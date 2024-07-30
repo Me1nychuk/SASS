@@ -1,0 +1,23 @@
+@if index($btn-types, warning) {
+  /* == warning == */
+  .btn--warning {
+    background-color: #a461d8;
+
+    &:active {
+      background-color: darken(#a461d8, 0.1);
+    }
+
+    @media (hover: hover) {
+      &:hover,
+      &:focus {
+        background-color: lighten(#a461d8, 0.1);
+      }
+    }
+    &[disabled] {
+      background-color: #b5b5be;
+      cursor: not-allowed;
+    }
+  }
+} @else {
+  @error "Invalid type";
+}
