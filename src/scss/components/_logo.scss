@@ -1,0 +1,17 @@
+@use "../utils/placeholders";
+@use "../utils/functions" as fn;
+@use "../utils/mixins" as mx;
+@use "../utils/variables" as var;
+
+.logo {
+  @extend %main-title;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+
+  @include mx.mq("lg") {
+    padding: 16px 20px;
+  }
+}

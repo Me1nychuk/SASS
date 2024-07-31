@@ -1,0 +1,24 @@
+@use "../utils/placeholders";
+@use "../utils/functions" as fn;
+@use "../utils/mixins" as mx;
+@use "../utils/variables" as var;
+
+.notification {
+  flex-shrink: 0;
+
+  display: block;
+  min-width: 28px;
+  min-height: 20px;
+  padding: 0 10px;
+
+  font-family: "roboto", sans-serif;
+  color: fn.get-color("light");
+  border-radius: 12px;
+  background-color: fn.get-color("danger");
+
+  opacity: 0;
+
+  &.is-notify {
+    opacity: 1;
+  }
+}
