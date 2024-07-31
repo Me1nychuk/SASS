@@ -23,7 +23,7 @@
   }
 
   .sidebar & {
-    @include mx.ease("fast", opacity, transform);
+    @include mx.ease("slow", opacity, transform);
     transition-delay: 800ms, 600ms;
 
     position: absolute;
